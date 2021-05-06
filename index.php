@@ -1,3 +1,5 @@
+<?php require 'fonctions.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,9 @@
     <input type="text" name="name" id="name" placeholder="Search by name here">
     </form>
     <ul id="data-list">
-        <li id="data-item1">Eleve 1</li>
+    <?php foreach ($donnees as $student){ ?>
+        <li id="data-item<?php echo $student['id'] ?>"><?php echo $student['id'] ?></li>
+    <?php } ?>
         <li id="data-item2">Eleve 2</li>
         <li id="data-item3">Eleve 3</li>
     </ul>
